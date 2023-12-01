@@ -24,7 +24,7 @@ public final class LaunchUtils {
         int FLAG_MUTABLE = 33554432; // don't use pendingIntent.FLAG_MUTABLE, use numeric value instead to be able to compile api < 31
         int flags = PendingIntent.FLAG_UPDATE_CURRENT;
         if (android.os.Build.VERSION.SDK_INT >= 31) {
-          flags |= FLAG_MUTABLE;
+          flags |= FLAG_IMMUTABLE;
         }
         return flags;
     }
